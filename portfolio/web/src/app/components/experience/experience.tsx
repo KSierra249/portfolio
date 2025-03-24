@@ -9,7 +9,7 @@ export const Experience: FC = () => {
         <h2 className="text-3xl font-bold mb-8 text-center mb-8">EXPERIENCE</h2>
         <div className="container mx-auto px-4 space-x-4">
           <div className="flex flex-col md:flex-row md:space-x-8">
-            <div className="md:w-1/2">
+            <div className="md:w-1/3">
               <h4 className="text-lg font-semibold mb-4 text-green-600">EDUCATION</h4>
               <ul className="space-y-4">
                 <li>
@@ -27,7 +27,7 @@ export const Experience: FC = () => {
               </ul>
             </div>
 
-            <div className="md:w-1/2 mt-8 md:mt-0">
+            <div className="md:w-1/3 mt-8 md:mt-0">
               <h4 className="text-lg font-semibold mb-4 text-green-600">EXPERIENCE</h4>
               <ul className="space-y-4">
                 <li>
@@ -41,6 +41,24 @@ export const Experience: FC = () => {
                 <li>
                   <h5 className="font-semibold">2024</h5>
                   <p className="text-gray-700">University of Nebraska - Lincoln - Game Developer</p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="md:w-1/3 mt-8 md:mt-0">
+              <h4 className="text-lg font-semibold mb-4 text-green-600">PROJECTS</h4>
+              <ul className="space-y-4">
+                <li>
+                  <h5 className="font-semibold">Diary App </h5>
+                  <p className="text-gray-700">Present - React.js, Express.js, and MySQL</p>
+                </li>
+                <li>
+                  <h5 className="font-semibold">Music Generator App</h5>
+                  <p className="text-gray-700">September 2023 - React.js</p>
+                </li>
+                <li>
+                  <h5 className="font-semibold">World Travel App</h5>
+                  <p className="text-gray-700">May 2024 - Kivy, Python, MySQL</p>
                 </li>
               </ul>
             </div>

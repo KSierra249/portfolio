@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import IMG from "../images/flower.jpg";
+import RESUME from './Resume___Karla_Sierra_Mendoza.pdf'
 
 export const Home: FC = () => {
   return (
@@ -14,10 +15,17 @@ export const Home: FC = () => {
           <h1 className="text-5xl font-bold mb-4">KARLA SIERRA</h1>
           <h2 className="text-2xl font-medium mb-8">Developer</h2>
           <div className="space-x-4">
-            <button className="bg-green-600 px-6 py-3 rounded-md hover:bg-green-700 transition">
+            <a 
+            className="bg-green-600 px-6 py-3 rounded-md hover:bg-green-700 transition inline-block text-center"
+            href={RESUME}
+            download="Karla_Sierra_Resume.pdf"
+            >
               Download CV
-            </button>
-            <button className="bg-green-600 px-6 py-3 rounded-md hover:bg-green-700 transition">
+            </a>
+            <button 
+            className="bg-green-600 px-6 py-3 rounded-md hover:bg-green-700 transition"
+            onClick={() => window.location.href = '#contact'}
+            >
               Contact Me
             </button>
           </div>

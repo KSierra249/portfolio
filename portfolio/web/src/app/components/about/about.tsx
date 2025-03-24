@@ -16,14 +16,15 @@ import {
   SiNodedotjs,
   SiExpress,
   SiAmazonwebservices,
-  SiDocker
+  SiDocker,
+  SiTailwindcss
 } from 'react-icons/si';
 
 export const About: FC = () => {
   return (
     <section 
       id="about" 
-      className="container mx-auto px-4 py-16"
+      className="container mx-auto px-4 py-16 bg-white"
     >
       <h2 className="text-3xl font-bold mb-8 text-center mb-8">ABOUT ME</h2>
       <div className="container mx-auto px-4 space-x-4">
@@ -57,6 +58,7 @@ export const About: FC = () => {
               <SiTypescript className="text-blue-700" />
               <SiReact className="text-blue-400" />
               <SiRedux className="text-purple-600" />
+              <SiTailwindcss className="text-blue-400" />
             </div>
             <h5 className="text-md font-semibold mb-4">Technologies</h5>
             <div className="flex space-x-4 text-3xl mb-4">
