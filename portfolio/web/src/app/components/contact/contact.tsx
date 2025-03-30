@@ -30,20 +30,20 @@ export const Contact: FC = () => {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Write Your Full Name"
+              placeholder="Billy Joe"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-green-600"
             />
             <input
               type="email"
-              placeholder="Write Your Email"
+              placeholder="example@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-green-600"
             />
             <textarea
-              placeholder="Write Your Message"
+              placeholder="Message....."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-green-600 h-32"
