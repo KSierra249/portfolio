@@ -1,4 +1,6 @@
 import { FC, FormEvent, useState } from 'react';
+import Confetti from 'react-confetti';
+
 
 export const Contact: FC = () => {
   const [name, setName] = useState('');
@@ -6,6 +8,7 @@ export const Contact: FC = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [showConfetti, setShowConfetti] = useState(false);
 
   
   const handleSubmit = async (event: FormEvent) => {
@@ -28,6 +31,8 @@ export const Contact: FC = () => {
         setEmail('');
         setMessage('');
         setError('');
+        setShowConfetti(true);
+        setTimeout(() => { setShowConfetti(false);}, 10000); 
       }
     } catch (error) {
       console.error('Error:', error);
@@ -46,6 +51,12 @@ export const Contact: FC = () => {
           If you have any questions, feel free to reach out!
         </p>
         <div className="max-w-lg mx-auto">
+          {showConfetti && (
+            <Confetti
+              numberOfPieces={200}
+              gravity={0.2}
+            />
+          )}
           {error && <p className="text-red-500 text-center">{error}</p>}
           <form className="space-y-6" onSubmit={handleSubmit}>
             <input
