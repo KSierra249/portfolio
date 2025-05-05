@@ -27,6 +27,7 @@ export const Contact: FC = () => {
         setName('');
         setEmail('');
         setMessage('');
+        setError('');
       }
     } catch (error) {
       console.error('Error:', error);
