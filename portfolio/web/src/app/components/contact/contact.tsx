@@ -4,16 +4,34 @@ export const Contact: FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-
-    alert(`
-      Name: ${name}\n
-      Email: ${email}\n
-      Message: ${message}
-    `);
+    try {
+      const response = await fetch('http://localhost:3333/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+      if (response.ok) {
+        setSuccess('Message sent successfully!');
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setError('Failed to send message. Please try again later.');
+    }
   }
 
   return (
@@ -27,6 +45,7 @@ export const Contact: FC = () => {
           If you have any questions, feel free to reach out!
         </p>
         <div className="max-w-lg mx-auto">
+          {error && <p className="text-red-500 text-center">{error}</p>}
           <form className="space-y-6" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -54,6 +73,7 @@ export const Contact: FC = () => {
             >
               CONTACT ME
             </button>
+            {success && <p className="text-green-500 text-center">{success}</p>}
           </form>
         </div>
       </div>
