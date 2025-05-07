@@ -79,13 +79,13 @@ export const Contact: FC = () => {
               onChange={(e) => setMessage(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-green-600 h-32"
             ></textarea>
+            {success && <p className="text-green-500 text-center">{success}</p>}
             <button
               type="submit"
               className="bg-green-600 px-6 py-3 rounded-md hover:bg-green-700 transition"
             >
               CONTACT ME
             </button>
-            {success && <p className="text-green-500 text-center">{success}</p>}
           </form>
         </div>
       </div>

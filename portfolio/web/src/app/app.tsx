@@ -13,6 +13,13 @@ function App() {
       <About />
       <Experience />
       <Contact />
+      <button
+        id="back-to-top"
+        className="fixed bottom-4 right-4 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        Back to Top
+      </button>
     </div>
   );
 }

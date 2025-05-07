@@ -8,7 +8,7 @@ export const Experience: FC = () => {
 
   const projects = [
     {
-      title: "Diary App",
+      title: "Personal Diary App",
       description: "In development",
       longDescription: "This is a diary app that allows users to create, read, update, and delete diary entries. It uses React.js for the frontend and Express.js with MySQL for the backend.",
       repoLink: "https://github.com/K41L3r14/466-Personal-Diary"
@@ -20,7 +20,7 @@ export const Experience: FC = () => {
     },
     {
       title: "World Travel App",
-      description: "May 2024",
+      description: "May 2023",
       longDescription: "This app allows users to explore and plan different travel destinations. It uses Kivy for the frontend and Python with MySQL for the backend.",
     },
     {
